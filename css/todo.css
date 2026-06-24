@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --idColor: rgb(42, 165, 42);
+    height: 1500px;
+
+}
+
+::selection {
+    background-color: var(--idColor);
+    color: #fff;
+}
+
+button.add {
+    background-color: var(--idColor);
+    border: none;
+    padding: 6px 0;
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    height: 40px;
+}
+
+
+.create-task {
+    /* position: absolute; */
+    margin: 0 0 20px 0;
+    width: 100%;
+    padding: 20px;
+    /* top: -142px; */
+    /* top: 60px; */
+    background-color: rgba(216, 213, 212, 0.781);
+    transition: top ease 0.75s;
+    border-bottom: 2px solid var(--idColor);
+}
+
+@media (max-width:450px) {
+    .create-task {}
+}
+
+.create-task input[type='text'] {
+    padding: 10px;
+    border: 2px solid var(--idColor);
+    caret-color: var(--idColor);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto 0px;
+    display: inline-block;
+}
+
+.create-task input[type='text'] {
+    width: 69.5%;
+
+}
+
+.create-task select {
+    width: 29.5%;
+
+}
+
+.create-task input[type='text'] {
+    outline-color: var(--idColor);
+}
+
+
+
+.priority-chart {
+    border: 1px solid #777;
+    list-style: none;
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.priority-chart li {
+    display: inline-block;
+    margin: 0 15px;
+
+}
+
+.priority-chart li .prioDemo {
+    /* display: inline-block; */
+    width: 15px;
+    height: 15px;
+    border: 0.5px solid rgb(155, 155, 155);
+    float: right;
+}
+
+.priority-chart li:nth-of-type(1) .prioDemo {
+    background-color: red;
+}
+
+.priority-chart li:nth-of-type(2) .prioDemo {
+    background-color: yellow;
+}
+
+.priority-chart li:nth-of-type(3) .prioDemo {
+    background-color: blue;
+}
+
+.priority-chart li:nth-of-type(4) .prioDemo {
+    background-color: green;
+}
+
+.task {
+    font-size: 23px;
+    margin: 0 30px 30px 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.76);
+}
+
+
+.task.checked {
+    color: #666;
+    position: relative;
+
+}
+
+.task.checked::before {
+    content: "";
+    display: block;
+    width: calc(100% - 70px);
+    height: 2px;
+    background-color: rgb(97, 97, 97);
+    position: absolute;
+    top: 35%;
+    left: 0;
+    border-radius: 10px;
+
+}
+
+.task .priority-letter {
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 900;
+    padding: 2px;
+    margin: 0 -5px 0 0;
+    color: #FFF;
+    width: 25px;
+}
+
+.task.checked .priority-letter {
+    background-color: rgb(117, 117, 117) !important;
+    color: #fff;
+
+}
+
+
+.task .remove,
+.task .check {
+    margin: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.task .task-text {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.task .date {
+    margin: 4px 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.task .remove:hover,
+.task .check:hover {
+    text-shadow: 2px 2px 3px var(--idColor);
+}
+
+.task .remove i,
+.task .check i {
+    color: black;
+    font-size: 20px;
+}
+
+.task.checked i {
+    color: #666;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+
+}
+
+.controls select {
+    height: 35px;
+    font-size: 16px;
+    padding: 0 5px;
+    border: 1px solid black;
+    color: black;
+}
+
+
+.controls select option {
+    padding: 5px;
+    color: black;
+}
+
+.controls select option::selected {
+    background-color: var(--idColor);
+}
+
+@media (max-width:390px) {
+
+    .priority-chart {
+        text-align: left;
+    }
+
+    .task {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .task.checked .task-text {
+        text-decoration: line-through;
+
+
+    }
+
+    .task.checked::before {
+        display: none;
+    }
+
+    .task .task-text {
+        padding: 5px 0;
+        font-size: 18px;
+        margin: 7px 0;
+
+    }
+
+    .task .date {
+        font-size: 15px;
+        margin: 0;
+
+    }
+
+    .task .remove,
+    .task .check {
+        margin: 5px 0;
+    }
+}
+
+
+/* common styling */
+
+.select-component {
+    padding: 10px;
+    border: 2px solid var(--idColor);
+    caret-color: var(--idColor);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto 0px;
+    display: inline-block;
+    margin-bottom: 0;
+    color: rgb(107, 106, 106);
+    cursor: pointer;
+
+}
+
+.select-component:focus {
+    color: black;
+}

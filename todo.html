@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerd ToDo 1.0 - Eslam Esam</title>
+    <!-- font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+
+<body>
+    <button class="add" onclick="addTask()">Add</button>
+    <div class="create-task">
+        <input class="task-name" type="text" placeholder="Task Name">
+        <select class="select-component" name="" id="priority-level">
+            <option value="0" selected disabled>pick a Priority</option>
+            <option value="#0F0">Low</option>
+            <option value="#00F">Medium</option>
+            <option value="#FF0">High</option>
+            <option value="#F00">Emergency</option>
+        </select>
+    </div>
+
+    <section class="tasks"></section>
+
+    <ul class="priority-chart">
+        <li>Emergency priority: <span class="prioDemo"></span></li>
+        <li>High priority: <span class="prioDemo"></span></li>
+        <li>Medium priority: <span class="prioDemo"></span></li>
+        <li>Low priority: <span class="prioDemo"></span></li>
+    </ul>
+    <div class="controls">
+        <div class="direction">
+            <select class="select-component" name="dir" id="dir">
+                <option value="ltr">Left</option>
+                <option value="rtl">Right</option>
+            </select>
+        </div>
+        <div class="theme">
+            <select class="select-component" name="theme" id="theme">
+                <option value="rgb(42, 165, 42) ">Green</option>
+                <option value="rgb(180, 10, 10)">Red</option>
+                <option value="rgb(236, 134, 16)">Orange</option>
+                <option value="rgb(20, 22, 20)">Dark</option>
+            </select>
+
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
